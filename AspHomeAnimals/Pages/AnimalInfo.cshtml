@@ -1,0 +1,18 @@
+﻿
+@page
+@using AspHomeAnimals.Pages
+
+@model AspHomeAnimals.Pages.AnimalInfoModel
+
+@{
+    ViewData["Title"] = "Animal Info";
+}
+
+<h1>@Model.Animal.Name</h1>
+<p>Sound: @Model.Animal.Sound</p>
+
+<form method="post">
+    <input type="hidden" asp-for="Animal.Name" />
+    <input type="hidden" asp-for="Animal.Sound" />
+    <button type="submit">Save to File</button>
+</form>
